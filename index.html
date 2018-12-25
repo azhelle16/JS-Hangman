@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Application: Word Guess</title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+	<script type="text/javascript" src="./javascript/game.js"></script>
+	<script type="text/javascript">
+		function initPage() {
+			document.getElementById("username").focus();
+		}
+	</script>
+</head>
+<body onload="initPage()" onkeypress="listenToKeyStrokes(event);">
+	<table border="3" class="dispHide" id="mainGame">
+		<!-- category -->
+		<tr>
+			<td colspan="3">
+				<div>
+					<img src="./images/categ.png" height="70" alt="Category: 90's Movies">
+				</div>
+			</td>
+		</tr>
+		<!-- title -->
+		<tr>
+			<td colspan="3">
+				<span>Welcome to Hangman, 
+					<span id="pname"></span>!
+				</span>
+			</td>
+		</tr>
+		<!-- game screen -->
+		<tr>
+			<td colspan="3">
+				<span>
+					Please guess the movie:
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<span id="guessWordHere">
+					
+				</span>
+			</td>
+		</tr>
+		<!-- letters guessed -->
+		<tr>
+			<td colspan="3">
+				<span>
+					Guessed Letters
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<span id="guessLettersHere">
+					
+				</span>
+			</td>
+		</tr>
+		<!-- number of guesses remaining -->
+		<tr>
+			<td colspan="3">
+				<span>Guesses Remaining: <span id="gRem">15</span></span>
+			</td>
+		</tr>
+		<!-- wins, losses, total games played  -->
+		<tr>
+			<td>
+				<span>WINS: <span id="totalWins">0</span></span>
+			</td>
+			<td>
+				<span>LOSS: <span id="totalLoss">0</span></span>
+			</td>
+			<td>
+				<span>GAMES PLAYED: <span id="gamesPlayed">0</span></span>
+			</td>
+		</tr>
+		<!-- reset -->
+		<tr>
+			<td colspan="3">
+				<input type="button" value="Reset" onClick="reset()">
+			</td>
+		</tr>
+	</table>
+	<div id="welcomeLogo">
+		<div>
+			<img src="./images/hmanlogo.gif" width="600" height="100" alt="Hangman Logo">
+		</div>
+		<div>
+			<img src="./images/name.png" height="50" alt="Enter your name">
+		</div>
+		<div>
+			<input type="text" height="50" id="username"/>
+		</div>
+	</div>
+	<embed id="welcomeAudio" src="./images/sounds/electronic.mp3" type="audio/mpeg" autoplay="true" hidden="true" loop="true"></embed>
+	<audio id="correctAudio">
+		<source src="./images/sounds/correct-answer.mp3" type="audio/mpeg">
+	</audio>		
+	<audio id="wrongAudio">
+		<source src="./images/sounds/wrong-answer.wav" type="audio/mpeg">
+	</audio>	
+</body>
+</html>

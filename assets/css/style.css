@@ -1,0 +1,81 @@
+/* GENERAL */
+
+body {
+	background-image: url("../../images/main.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+#guessWordHere, #guessLettersHere {
+	letter-spacing: 10px;
+	font-size: 30px;
+}
+
+#pname {
+	text-transform: capitalize;
+}
+
+table {
+	margin-top: 50px;
+	margin-left: 150px;
+	width: 650px;
+	text-align: center;
+	color: white;
+}
+
+td {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.dispHide {
+	display: none;
+}
+
+#welcomeLogo {
+	width: 960px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: 0px;
+    transform: translate(-50%, -50%);
+}
+
+
+#welcomeLogo div, #mainGame div {
+	width: 100%;
+	text-align: center;
+}
+
+input[type=text]{
+    width: 70%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 10px;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+#gRem {
+	color: green;
+}
+
+input[type=button]{
+    width: 15%;
+    padding: 5px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #ffffff;
+    background-color: #144994;
+    font-size: 15px;
+}
