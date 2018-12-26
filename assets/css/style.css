@@ -22,11 +22,13 @@ table {
 	width: 650px;
 	text-align: center;
 	color: white;
+    border: 3px solid white;
 }
 
 td {
 	padding-top: 25px;
 	padding-bottom: 25px;
+    border: 1px solid white;
 }
 
 .dispHide {
@@ -62,6 +64,7 @@ input[type=text]{
     font-weight: bold;
     letter-spacing: 10px;
     font-family: 'Georgia', Times, Times New Roman, serif;
+    height: 50px;
 }
 
 #gRem {

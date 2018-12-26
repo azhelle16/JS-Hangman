@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>JS Application: Word Guess</title>
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
@@ -16,7 +16,7 @@
 	</script>
 </head>
 <body>
-	<table border="3" class="dispHide" id="mainGame">
+	<table class="dispHide" id="mainGame">
 		<!-- category -->
 		<tr>
 			<td colspan="3">
@@ -47,7 +47,7 @@
 		<tr rowspan="2">
 			<td colspan="3">
 				<span>
-					Guessed Letters
+					Guessed Letters:
 				</span><br><br><br>
 				<span id="guessLettersHere">					
 				</span>
@@ -86,10 +86,10 @@
 			<img src="./images/name.png" height="50" alt="Enter your name">
 		</div>
 		<div>
-			<input type="text" height="50" id="username"/>
+			<input type="text" id="username"/>
 		</div>
 	</div>
-	<embed id="welcomeAudio" src="./images/sounds/electronic.mp3" type="audio/mpeg" autoplay="true" hidden="true" loop="true"></embed>
+	<embed id="welcomeAudio" src="./images/sounds/electronic.mp3" type="audio/mpeg" autoplay="true" hidden="true" loop="true" />
 	<audio id="correctAudio">
 		<source src="./images/sounds/correct-answer.mp3" type="audio/mpeg">
 	</audio>		
