@@ -73,7 +73,7 @@ function pickRandomWord() {
  #  DATE          : December 18, 2018 PST
  #  MODIFIED BY   : Maricel Louise Sumulong
  #  REVISION DATE : December 25, 2018 PST
- #  REVISION #    : 2
+ #  REVISION #    : 3
  #  DESCRIPTION   : Listens to user key inputs
  #  PARAMETERS    : key code event
  #
@@ -94,8 +94,10 @@ function listenToKeyStrokes(event) {
 			gamePiece.wordSpace = tempArr.join("");
 			document.getElementById("guessWordHere").innerHTML = gamePiece.wordSpace;
 		} else {
-			if (gamePiece.guessedLetters.indexOf(glet) != -1)
+			if (gamePiece.guessedLetters.indexOf(glet) != -1) {
+				document.getElementById("existsAudio").play();
 				return false
+			}
 			gamePiece.guessedLetters.push(glet)
 			document.getElementById("guessLettersHere").innerHTML = gamePiece.guessedLetters.join(" ")
 			//update guess remaining values
@@ -144,6 +146,9 @@ function listenToKeyStrokes(event) {
 			document.getElementById("pname").innerHTML = uname;
 			var child = document.getElementById("welcomeAudio");
 			child.parentNode.removeChild(child);
+			document.getElementById("resetButton").onclick = function() {
+				reset();
+			}
 	  } else {
 			return false
 	    }
