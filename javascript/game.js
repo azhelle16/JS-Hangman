@@ -20,6 +20,7 @@ var gamePiece = {
 	totalLoss : 0,
 	totalGames : 0,
 	guessedLetters : [],
+	startGame : false,
 	wordBank : ["goodfellas","the game","jackie brown","boogie nights","the big lebowski","the player","the shawshank redemption","havana","stiff upper lips","ed wood", "forrest gump",
 					"american beauty","being john malkovich","glengarry glen ross","the doors","magnolia","man on the moon","oscar","pretty woman","cape fear","the road to wellville","sleepers",
 					"titanic","true lies","the grifters","pulp fiction","heavenly creatures","leaving las vegas","under suspicion","fargo","trainspotting","casino","the matrix",
@@ -251,8 +252,15 @@ var gamePiece = {
 		gamePiece.pickRandomWord();
 		document.getElementById("gRem").style.color = "green";
 	
-	},
-	startGame : false
+	}
 
 }
+
+window.onload = function () {
+	document.getElementById("username").focus();
+}
+
+document.onkeypress = function() {
+	gamePiece.listenToKeyStrokes(event);
+}	
 

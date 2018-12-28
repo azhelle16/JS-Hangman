@@ -2,19 +2,9 @@
 <html lang="en">
 <head>
 	<title>JS Application: Word Guess</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
 	<script type="text/javascript" src="./javascript/game.js"></script>
-	<script type="text/javascript">
-		window.onload = function () {
-			document.getElementById("username").focus();
-		}
-
-		document.onkeypress = function() {
-			gamePiece.listenToKeyStrokes(event);
-		}	
-	</script>
 </head>
 <body>
 	<table class="dispHide" id="mainGame">
