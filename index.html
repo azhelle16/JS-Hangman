@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<title>JS Application: Word Guess</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
 	<script type="text/javascript" src="./javascript/game.js"></script>
@@ -11,7 +12,7 @@
 		}
 
 		document.onkeypress = function() {
-			listenToKeyStrokes(event);
+			gamePiece.listenToKeyStrokes(event);
 		}	
 	</script>
 </head>
@@ -98,6 +99,6 @@
 	</audio>
 	<audio id="existsAudio">
 		<source src="./images/sounds/error.mp3" type="audio/mpeg">
-	</audio>		
+	</audio>	
 </body>
 </html>
