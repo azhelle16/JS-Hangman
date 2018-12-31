@@ -70,8 +70,8 @@ var gamePiece = {
 		 #  AUTHOR        : Maricel Louise Sumulong
 		 #  DATE          : December 18, 2018 PST
 		 #  MODIFIED BY   : Maricel Louise Sumulong
-		 #  REVISION DATE : December 27, 2018 PST
-		 #  REVISION #    : 4
+		 #  REVISION DATE : December 31, 2018 PST
+		 #  REVISION #    : 5
 		 #  DESCRIPTION   : Listens to user key inputs
 		 #  PARAMETERS    : key code event
 		 #
@@ -112,11 +112,14 @@ var gamePiece = {
 
 			//check if there's still guess remaining
 			if (document.getElementById("gRem").innerHTML == 0) {
-				gamePiece.resetValues();
 				gamePiece.totalLoss += 1;
 				document.getElementById("totalLoss").innerHTML = gamePiece.totalLoss;
 				document.getElementById("wrongAudio").play();
-				gamePiece.pickRandomWord();
+				document.getElementById("guessWordHere").innerHTML = gamePiece.wordToGuess;
+				setTimeout(function(){
+            		gamePiece.resetValues();
+            		gamePiece.pickRandomWord();
+            	}, 1500)
 				gamePiece.totalGames += 1;
 				document.getElementById("gamesPlayed").innerHTML = gamePiece.totalGames;
 			}
@@ -128,10 +131,12 @@ var gamePiece = {
 				gamePiece.totalWins += 1;
             	document.getElementById("totalWins").innerHTML = gamePiece.totalWins;
             	document.getElementById("correctAudio").play();
-            	gamePiece.resetValues();
-            	gamePiece.pickRandomWord();
             	gamePiece.totalGames += 1;
             	document.getElementById("gamesPlayed").innerHTML = gamePiece.totalGames;
+            	setTimeout(function(){
+            		gamePiece.resetValues();
+            		gamePiece.pickRandomWord();
+            	}, 1000)
 			}
 		
 		} else if (event.keyCode == 13 && gamePiece.startGame == false) {
