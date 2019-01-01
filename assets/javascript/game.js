@@ -70,8 +70,8 @@ var gamePiece = {
 		 #  AUTHOR        : Maricel Louise Sumulong
 		 #  DATE          : December 18, 2018 PST
 		 #  MODIFIED BY   : Maricel Louise Sumulong
-		 #  REVISION DATE : December 31, 2018 PST
-		 #  REVISION #    : 5
+		 #  REVISION DATE : January 01, 2019 PST
+		 #  REVISION #    : 6
 		 #  DESCRIPTION   : Listens to user key inputs
 		 #  PARAMETERS    : key code event
 		 #
@@ -115,9 +115,12 @@ var gamePiece = {
 				gamePiece.totalLoss += 1;
 				document.getElementById("totalLoss").innerHTML = gamePiece.totalLoss;
 				document.getElementById("wrongAudio").play();
-				document.getElementById("guessWordHere").innerHTML = gamePiece.wordToGuess;
+				var final = document.getElementById("guessWordHere");
+				final.style.color = "red";
+				final.innerHTML = gamePiece.wordToGuess.toUpperCase();
 				setTimeout(function(){
             		gamePiece.resetValues();
+            		final.style.color = "white";
             		gamePiece.pickRandomWord();
             	}, 1500)
 				gamePiece.totalGames += 1;
@@ -136,7 +139,7 @@ var gamePiece = {
             	setTimeout(function(){
             		gamePiece.resetValues();
             		gamePiece.pickRandomWord();
-            	}, 1000)
+            	}, 500)
 			}
 		
 		} else if (event.keyCode == 13 && gamePiece.startGame == false) {
