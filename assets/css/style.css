@@ -5,50 +5,60 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-family: 'Georgia', Times, Times New Roman, serif;
+	text-align: center;
+}
+
+#mainGame {
+	border: 2px solid gray;
+	border-radius: 10px;
+	width: 560px;
+	margin: 40px auto;
+	padding: 20px 0;
+	color: white;
+}
+
+hr {
+	border: 1px solid gray;
+	margin: 20px 20px;	
+}
+
+.dashedBorder {
+	border: 2px dashed gray;
+	width: 92%;
+	margin: 10px 20px;
+	padding: 10px 0;
+}
+
+table {
+	width: 92%;
+	text-align: center;
+	margin: 10px 20px;
+	border-collapse: collapse;
+ 	table-layout: fixed;
+}
+
+td {
+	padding: 10px 0;
+	font-size: 30px;
+}
+
+th {
+	padding: 10px 0;
 }
 
 #guessWordHere, #guessLettersHere {
 	letter-spacing: 10px;
 	font-size: 30px;
+	word-wrap: break-word;
+	line-height: 50px;
 }
 
 #pname {
 	text-transform: capitalize;
 }
 
-table {
-	margin-top: 25px;
-	margin-left: 150px;
-	width: 650px;
-	text-align: center;
-	color: white;
-    border: 3px solid white;
-}
-
-td {
-	padding-top: 25px;
-	padding-bottom: 25px;
-    border: 1px solid white;
-}
-
 .dispHide {
 	display: none;
-}
-
-#welcomeLogo {
-	width: 960px;
-	position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: 0px;
-    transform: translate(-50%, -50%);
-}
-
-
-#welcomeLogo div, #mainGame div {
-	width: 100%;
-	text-align: center;
 }
 
 input[type=text]{
@@ -67,9 +77,17 @@ input[type=text]{
     height: 50px;
 }
 
-#gRem {
+#gRem, #totalWins {
 	color: green;
     font-size: 30px;
+}
+
+#totalLoss {
+	color: red;
+}
+
+#gamesPlayed {
+	color: cyan;
 }
 
 input[type=button]{
@@ -82,4 +100,14 @@ input[type=button]{
     color: #ffffff;
     background-color: #144994;
     font-size: 15px;
+}
+
+#welcomeLogo {
+	width: 960px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: 0px;
+    transform: translate(-50%, -50%);
 }

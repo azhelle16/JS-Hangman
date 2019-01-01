@@ -1,74 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<title>JS Application: Word Guess</title>
+	<title>JS Application: Word Guess Game</title>
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
 	<script type="text/javascript" src="./assets/javascript/game.js"></script>
 </head>
 <body>
-	<table class="dispHide" id="mainGame">
-		<!-- category -->
-		<tr>
-			<td colspan="3">
-				<div>
-					<img src="./assets/images/categ.png" height="50" alt="Category: 90's Movies">
-				</div>
-			</td>
-		</tr>
-		<!-- title -->
-		<tr>
-			<td colspan="3">
-				<span>Welcome to Word Guess, 
-					<span id="pname"></span>!
-				</span>
-			</td>
-		</tr>
-		<!-- game screen -->
-		<tr rowspan="2">
-			<td colspan="3">
-				<span>
-					Please guess the movie:
-				</span><br><br><br>
-				<span id="guessWordHere">					
-				</span>
-			</td>
-		</tr>
-		<!-- letters guessed -->
-		<tr rowspan="2">
-			<td colspan="3">
-				<span>
-					Guessed Letters:
-				</span><br><br><br>
-				<span id="guessLettersHere">					
-				</span>
-			</td>
-		</tr>
-		<!-- number of guesses remaining -->
-		<tr>
-			<td colspan="3">
-				<span>Guesses Remaining: <span id="gRem">15</span></span>
-			</td>
-		</tr>
-		<!-- wins, losses, total games played  -->
-		<tr>
-			<td>
-				<span>WINS: <span id="totalWins">0</span></span>
-			</td>
-			<td>
-				<span>LOSS: <span id="totalLoss">0</span></span>
-			</td>
-			<td>
-				<span>GAMES PLAYED: <span id="gamesPlayed">0</span></span>
-			</td>
-		</tr>
-		<!-- reset -->
-		<tr>
-			<td colspan="3">
-				<input type="button" value="Reset" id="resetButton">
-			</td>
-		</tr>
-	</table>
+	<div id="mainGame" class="dispHide">
+		<img src="./assets/images/categ.png" height="80" alt="Category: 90's Movies">
+		<br>
+		<div class="dashedBorder">
+			<span>Welcome to Word Guess, <span id="pname"></span>!</span>
+		</div>
+		<br>
+		<span>Please guess the movie:</span><br><br><br><span id="guessWordHere"></span>
+		<hr>
+		<span>Guessed Letters:</span><br><br><br><span id="guessLettersHere"></span>
+		<hr>
+		<span>Guesses Remaining: <span id="gRem">15</span></span>
+		<br><br>
+		<table border="2">
+			<tr>
+				<th>WINS</th>
+				<th>LOSSES</th>
+				<th>GAMES PLAYED</th>
+			</tr>
+			<tr>
+				<td>
+					<span id="totalWins">0</span>
+				</td>
+				<td>
+					<span id="totalLoss">0</span>
+				</td>
+				<td>
+					<span id="gamesPlayed">0</span>
+				</td>
+			</tr>
+		</table>
+		<br><br>
+		<input type="button" value="Reset" id="resetButton">
+	</div>
 	<div id="welcomeLogo">
 		<div>
 			<img src="./assets/images/hmanlogo.gif" width="600" height="100" alt="Word Guess Logo">
