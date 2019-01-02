@@ -12,7 +12,7 @@ body {
 	border: 2px solid gray;
 	border-radius: 10px;
 	width: 560px;
-	margin: 40px auto;
+	margin: 30px auto;
 	padding: 20px 0;
 	color: white;
 }
@@ -50,7 +50,7 @@ th {
 	letter-spacing: 10px;
 	font-size: 30px;
 	word-wrap: break-word;
-	line-height: 50px;
+	line-height: 40px;
 }
 
 #pname {
