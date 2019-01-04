@@ -41,8 +41,8 @@ var gamePiece = {
 		 #  AUTHOR        : Maricel Louise Sumulong
 		 #  DATE          : December 18, 2018 PST
 		 #  MODIFIED BY   : Maricel Louise Sumulong
-		 #  REVISION DATE : December 27, 2018 PST
-		 #  REVISION #    : 2
+		 #  REVISION DATE : January 03, 2019 PST
+		 #  REVISION #    : 3
 		 #  DESCRIPTION   : Selects random word in the list
 		 #  PARAMETERS    : none
 		 #
@@ -51,13 +51,7 @@ var gamePiece = {
 
 		var index = Math.floor(Math.random() * ((gamePiece.wordBank.length - 1) - 0) + 0);
 		gamePiece.wordToGuess = gamePiece.wordBank[index];
-		for (var i = 0; i < gamePiece.wordToGuess.length; i++) {
-			if (gamePiece.wordToGuess[i] == " ") {
-				gamePiece.wordSpace += " "
-			} else {
-				gamePiece.wordSpace += "-"	
-		  	}
-		}
+		gamePiece.wordSpace = gamePiece.wordToGuess.replace(/[a-z]/g,"-")
 		document.getElementById("guessWordHere").innerHTML = gamePiece.wordSpace;
 
 	},
@@ -70,8 +64,8 @@ var gamePiece = {
 		 #  AUTHOR        : Maricel Louise Sumulong
 		 #  DATE          : December 18, 2018 PST
 		 #  MODIFIED BY   : Maricel Louise Sumulong
-		 #  REVISION DATE : January 01, 2019 PST
-		 #  REVISION #    : 6
+		 #  REVISION DATE : January 03, 2019 PST
+		 #  REVISION #    : 7
 		 #  DESCRIPTION   : Listens to user key inputs
 		 #  PARAMETERS    : key code event
 		 #
@@ -90,7 +84,7 @@ var gamePiece = {
 				gamePiece.wordSpace = tempArr.join("");
 				document.getElementById("guessWordHere").innerHTML = gamePiece.wordSpace;
 			} else {
-				if (gamePiece.guessedLetters.indexOf(glet) != -1) {
+				if (gamePiece.guessedLetters.includes(glet)) {
 					document.getElementById("existsAudio").play();
 					return false
 				}
