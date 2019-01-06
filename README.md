@@ -21,6 +21,9 @@ If user clicks the reset button, the number of wins, losses and games played wil
 Special Credits:
 
 flamingtext.com - for the logo images
+
 clipartmax.com - for the rose logo
+
 wikipedia.com, imdb.com, rollingstone.com, billboard.com, goodhousekeeping.com - list of words to be guessed
+
 orangefreesounds.com - for the sounds used for this game
