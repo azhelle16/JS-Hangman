@@ -353,6 +353,7 @@ var gamePiece = {
 		document.getElementById("exitButton").onclick = function() {
 			gamePiece.exitButton();
 		}
+		document.body.style.background = 'url("./assets/images/main3.jpg")';
 
 	},
 	changeCatButton : function() {
@@ -417,6 +418,8 @@ var gamePiece = {
 		document.querySelector('embed').setAttribute("loop","true")
 		document.getElementById("username").value = "";
 		document.getElementById("username").focus();
+		document.body.style.background = 'url("./assets/images/main.jpg")';
+		document.body.style.backgroundSize = 'cover';
 		gamePiece.startGame = false;
 		gamePiece.totalLoss = 0;
 		gamePiece.totalWins = 0;
