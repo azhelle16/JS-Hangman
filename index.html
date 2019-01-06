@@ -7,39 +7,55 @@
 	<script type="text/javascript" src="./assets/javascript/game.js"></script>
 </head>
 <body>
-	<div id="mainGame" class="dispHide">
-		<img src="./assets/images/categ.png" height="80" alt="Category: 90's Movies">
-		<br>
-		<div class="dashedBorder">
-			<span>Welcome to Word Guess, <span id="pname"></span>!</span>
+	<div class="dispHide" id="mainContainer">
+		<div id="mainWord">
+			<img src="./assets/images/word.gif" height="400">
 		</div>
-		<br>
-		<span>Press Any Key To Get Started!</span><br><br><br><span id="guessWordHere"></span>
-		<hr>
-		<span>Guessed Letters:</span><br><br><br><span id="guessLettersHere"></span>
-		<hr>
-		<span>Number Of Guesses Remaining: <span id="gRem">15</span></span>
-		<br><br>
-		<table border="2">
-			<tr>
-				<th>WINS</th>
-				<th>LOSSES</th>
-				<th>GAMES PLAYED</th>
-			</tr>
-			<tr>
-				<td>
-					<span id="totalWins">0</span>
-				</td>
-				<td>
-					<span id="totalLoss">0</span>
-				</td>
-				<td>
-					<span id="gamesPlayed">0</span>
-				</td>
-			</tr>
-		</table>
-		<br><br>
-		<input type="button" value="Reset" id="resetButton">
+		<div id="mainGame">
+			<img src="./assets/images/rose.png" height="80" alt="rose">
+			<img id="categPic" src="./assets/images/movies.png" height="80" alt="Category: 90's Movies">
+			<img src="./assets/images/rose.png" height="80" alt="rose" style="transform: rotate(220deg);">
+			<br>
+			<div class="dashedBorder">
+				<span>Welcome to Word Guess, <span id="pname"></span>!</span>
+			</div>
+			<br>
+			<span>Press Any Key To Get Started!</span><br><br><br><span id="guessWordHere"></span>
+			<hr>
+			<span>Guessed Letters:</span><br><br><br><span id="guessLettersHere"></span>
+			<hr>
+			<span>Number Of Guesses Remaining:&nbsp;&nbsp;&nbsp;&nbsp;<span id="gRem">15</span></span>
+			<br><br>
+			<table border="2">
+				<tr>
+					<th>WINS</th>
+					<th>LOSSES</th>
+					<th>GAMES PLAYED</th>
+				</tr>
+				<tr>
+					<td>
+						<span id="totalWins">0</span>
+					</td>
+					<td>
+						<span id="totalLoss">0</span>
+					</td>
+					<td>
+						<span id="gamesPlayed">0</span>
+					</td>
+				</tr>
+			</table>
+			<br><br>
+			<div class="floatLeft">
+				<input type="button" value="Reset" id="resetButton">
+				<input type="button" value="Change Category" id="changeCatButton">
+			</div>
+			<div class="floatRight">
+				<input type="button" value="Exit" id="exitButton">
+			</div>		
+		</div>
+		<div id="mainGuess">
+			<img src="./assets/images/guess.gif" height="400">
+		</div>
 	</div>
 	<div id="welcomeLogo">
 		<div>
@@ -52,12 +68,28 @@
 			<input type="text" id="username"/>
 		</div>
 	</div>
+	<div id="categories" class="dispHide">
+		<img src="./assets/images/select.png" height="120" alt="Please select a category:">
+		<br>
+		<input type="button" value="90's Movies" class="buttonCat">
+		<input type="button" value="American TV Shows" class="buttonCat">
+		<input type="button" value="Sports" class="buttonCat">
+		<input type="button" value="Music Artists" class="buttonCat">
+		<br>
+		<input type="button" value="Animals" class="buttonCat">
+		<input type="button" value="Scientists" class="buttonCat">
+		<input type="button" value="Fruits" class="buttonCat">
+	</div>	
 	<embed id="welcomeAudio" src="./assets/images/sounds/electronic.mp3" type="audio/mpeg" autoplay="true" hidden="true" loop="true" />
+	<!-- <audio id="welcomeAudio" controls loop preload="auto" hidden> -->
+ 		<!-- <source src="./assets/images/sounds/electronic.mp3" type="audio/mpeg"> -->
+  		<!-- Your browser does not support the audio element. -->
+	<!-- </audio> -->
 	<audio id="correctAudio">
 		<source src="./assets/images/sounds/correct-answer.mp3" type="audio/mpeg">
 	</audio>		
 	<audio id="wrongAudio">
-		<source src="./assets/images/sounds/wrong-answer.wav" type="audio/mpeg">
+		<source src="./assets/images/sounds/wrong-answer.wav" type="audio/wav">
 	</audio>
 	<audio id="existsAudio">
 		<source src="./assets/images/sounds/error.mp3" type="audio/mpeg">
