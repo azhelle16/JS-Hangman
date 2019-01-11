@@ -316,10 +316,10 @@ var gamePiece = {
 		 #
 		 #  FUNCTION NAME : setGameBoard
 		 #  AUTHOR        : Maricel Louise Sumulong
-		 #  DATE          : January 05, 2018
-		 #  MODIFIED BY   : 
-		 #  REVISION DATE : 
-		 #  REVISION #    : 
+		 #  DATE          : January 05, 2019 PST
+		 #  MODIFIED BY   : Maricel Louise Sumulong
+		 #  REVISION DATE : January 10, 2019 PST
+		 #  REVISION #    : 2
 		 #  DESCRIPTION   : to set the game board with the selected category
 		 #  PARAMETERS    : none
 		 #
@@ -354,6 +354,17 @@ var gamePiece = {
 			gamePiece.exitButton();
 		}
 		document.body.style.background = 'url("./assets/images/main3.jpg")';
+		var iwidth = window.innerWidth
+		// if (window.innerWidth <= 640) {
+			// document.body.style.backgroundSize = '640px 768px';
+		// } else if (window.innerWidth >= 641 && window.innerWidth <= 768) {
+			// document.body.style.backgroundSize = '768px 768px';
+		if (window.innerWidth < 1024) {
+			document.body.style.backgroundSize = window.innerWidth+"px 768px"	
+		  } else {
+				document.body.style.backgroundSize = 'cover';
+				document.body.style.backgroundRepeat = "no-repeat";
+		    }
 
 	},
 	changeCatButton : function() {
@@ -387,10 +398,10 @@ var gamePiece = {
 		 #
 		 #  FUNCTION NAME : exitButton
 		 #  AUTHOR        : Maricel Louise Sumulong
-		 #  DATE          : January 05, 2018
-		 #  MODIFIED BY   : 
-		 #  REVISION DATE : 
-		 #  REVISION #    : 
+		 #  DATE          : January 05, 2019 PST
+		 #  MODIFIED BY   : Maricel Louise Sumulong
+		 #  REVISION DATE : January 10, 2019 PST
+		 #  REVISION #    : 1
 		 #  DESCRIPTION   : goes back to the main page
 		 #  PARAMETERS    : none
 		 #
@@ -419,7 +430,12 @@ var gamePiece = {
 		document.getElementById("username").value = "";
 		document.getElementById("username").focus();
 		document.body.style.background = 'url("./assets/images/main.jpg")';
-		document.body.style.backgroundSize = 'cover';
+		if (window.innerWidth < 1024) {
+			document.body.style.backgroundSize = window.innerWidth+"px 768px"	
+		  } else {
+				document.body.style.backgroundSize = 'cover';
+				document.body.style.backgroundRepeat = "no-repeat";
+		    }
 		gamePiece.startGame = false;
 		gamePiece.totalLoss = 0;
 		gamePiece.totalWins = 0;
@@ -435,5 +451,16 @@ window.onload = function () {
 
 document.onkeypress = function() {
 	gamePiece.listenToKeyStrokes(event);
-}	
+}
+
+window.addEventListener("resize", function() {
+	
+	if (window.innerWidth < 1024) {
+		document.body.style.backgroundSize = window.innerWidth+"px 768px"	
+	} else {
+		document.body.style.backgroundSize = 'cover';
+		document.body.style.backgroundRepeat = "no-repeat";
+	  }
+
+})	
 

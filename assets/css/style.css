@@ -146,6 +146,13 @@ input[type=button]{
 	min-width: 100px;
 	width: auto;
 	cursor: pointer;
+	/*float: left;*/
+}
+
+#buttonContainer {
+	width: 80%;
+	height: 50%;
+	margin: 0 auto;
 }
 
 .floatLeft {
@@ -156,3 +163,187 @@ input[type=button]{
 	float: right;
 }
 
+ /* MEDIA QUERIES */
+
+@media screen and (min-width: 769px) and (max-width: 980px) { /* LARGE SCREENS */
+
+ 	body {
+ 		background-size: 980px 768px;
+ 	}
+
+ 	#welcomeLogo {
+ 		width: 900px;
+ 	}
+
+	#categories {
+		width: 900px;
+		top: 55%;
+	}
+
+	#categories img {
+		width: 80%;
+	}
+
+	#mainContainer {
+		padding: 0;
+	}
+
+	#mainWord, #mainGuess {
+		margin-top: 225px;
+
+	}
+
+	#mainWord {
+		margin-right: 40px;
+		margin-left: 15px;
+	}
+
+	#mainGuess {
+		margin-left: 40px;
+		margin-right: 15px;
+	}
+
+	#mainWord img, #mainGuess img {
+		height: 270px;
+	}
+
+	#mainGame {
+		width: 700px;
+	}
+
+	#guessWordHere, #guessLettersHere {
+		font-size: 30px;
+		line-height: 25px;
+	}
+
+	#categPic {
+		width: 50%;
+	}
+
+	.sideImage {
+		width: 20%;
+	}
+
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px) { /* MEDIUM SCREEN */
+
+ 	body {
+ 		background-size: 768px 768px;
+ 	}
+
+ 	#welcomeLogo {
+ 		width: 720px;
+ 	}
+
+	#categories {
+		width: 720px;
+		top: 55%;
+	}
+
+	#categories img {
+		width: 80%;
+	}
+
+	#mainContainer {
+		padding: 0;
+	}
+
+	#mainWord, #mainGuess {
+		margin-top: 225px;
+
+	}
+
+	#mainWord {
+		margin-right: 10px;
+		margin-left: 5px;
+	}
+
+	#mainGuess {
+		margin-left: 10px;
+		margin-right: 5px;
+	}
+
+	#mainWord img, #mainGuess img {
+		height: 250px;
+	}
+
+	#mainGame {
+		width: 600px;
+	}
+
+	#guessWordHere, #guessLettersHere {
+		font-size: 25px;
+		line-height: 25px;
+	}
+
+	#categPic {
+		width: 50%;
+	}
+
+	.sideImage {
+		width: 20%;
+	}
+
+}
+
+@media screen and (max-width: 640px) { /* SMALL SCREEN */
+
+ 	body {
+ 		background-size: 640px 768px;
+ 	}
+
+ 	#welcomeLogo {
+ 		width: 600px;
+ 	}
+
+	#categories {
+		width: 600px;
+		top: 55%;
+	}
+
+	#categories img {
+		width: 80%;
+	}
+
+	#mainContainer {
+		padding: 0;
+	}
+
+	#mainWord, #mainGuess {
+		margin-top: 225px;
+
+	}
+
+	#mainWord {
+		margin-right: 10px;
+		margin-left: 5px;
+	}
+
+	#mainGuess {
+		margin-left: 10px;
+		margin-right: 5px;
+	}
+
+	#mainWord img, #mainGuess img {
+		height: 200px;
+	}
+
+	#mainGame {
+		width: 500px;
+	}
+
+	#guessWordHere, #guessLettersHere {
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	#categPic {
+		width: 50%;
+	}
+
+	.sideImage {
+		width: 20%;
+	}
+
+}

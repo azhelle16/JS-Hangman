@@ -12,9 +12,9 @@
 			<img src="./assets/images/word.gif" height="400">
 		</div>
 		<div id="mainGame">
-			<img src="./assets/images/rose.png" height="80" alt="rose">
+			<img class="sideImage" src="./assets/images/rose.png" height="80" alt="rose">
 			<img id="categPic" src="./assets/images/movies.png" height="80" alt="Category: 90's Movies">
-			<img src="./assets/images/rose.png" height="80" alt="rose" style="transform: rotate(220deg);">
+			<img class="sideImage" src="./assets/images/rose.png" height="80" alt="rose" style="transform: rotate(220deg);">
 			<br>
 			<div class="dashedBorder">
 				<span>Welcome, <span id="pname"></span>!</span>
@@ -70,15 +70,15 @@
 	</div>
 	<div id="categories" class="dispHide">
 		<img src="./assets/images/select.png" height="120" alt="Please select a category:">
-		<br>
-		<input type="button" value="90's Movies" class="buttonCat">
-		<input type="button" value="American TV Shows" class="buttonCat">
-		<input type="button" value="Sports" class="buttonCat">
-		<input type="button" value="Music Artists" class="buttonCat">
-		<br>
-		<input type="button" value="Animals" class="buttonCat">
-		<input type="button" value="Scientists" class="buttonCat">
-		<input type="button" value="Fruits" class="buttonCat">
+		<div id="buttonContainer">
+			<input type="button" value="90's Movies" class="buttonCat">
+			<input type="button" value="American TV Shows" class="buttonCat">
+			<input type="button" value="Sports" class="buttonCat">
+			<input type="button" value="Music Artists" class="buttonCat">
+			<input type="button" value="Animals" class="buttonCat">
+			<input type="button" value="Scientists" class="buttonCat">
+			<input type="button" value="Fruits" class="buttonCat">
+		</div>
 	</div>	
 	<embed id="welcomeAudio" src="./assets/images/sounds/electronic.mp3" type="audio/mpeg" autoplay="true" hidden="true" loop="true" />
 	<!-- <audio id="welcomeAudio" controls loop preload="auto" hidden> -->
