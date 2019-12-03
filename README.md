@@ -12,7 +12,7 @@ The player can choose among seven categories:
 
 <b>_90's Movies, American TV Shows, Sports, Music Artists, Scientists, Fruits and Animals._</b>
 
-###Screenshots:
+### Screenshots:
 
 1. Home Page
 
