@@ -1,10 +1,10 @@
-#Word Guess
+# Word Guess
 
-##Description
+## Description
 
 An application based on the Hangman Game.
 
-###How Does It Work?
+### How Does It Work?
 
 Like the Hangman game, the player's objective is to guess the word before the number to guess runs out.
 
