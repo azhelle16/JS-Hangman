@@ -1,29 +1,38 @@
-This project is to determine the understanding of the developer about Javascript and integrating it with HTML and CSS
+#Word Guess
 
-It's a basic game called Word Guess.
+##Description
 
-In this game, the user will first see a greeting page asking for user's name. Once provided, user needs to press enter to go to the game.
+An application based on the Hangman Game.
 
-User can select from seven categories. The categories of the game are 90's movies, american tv shows, sports, music artists, scientists, fruits and animals.
+###How Does It Work?
 
-User can start guessing by pressing any keys. 
+Like the Hangman game, the player's objective is to guess the word before the number to guess runs out.
 
-User has 15 guesses to guess the word.
+The player can choose among seven categories: 
 
-If the user is able to guess the word, the user will hear a chime and the word guessed will also be displayed for few seconds to see what the name of the movie was. The number of wins and games played will be updated.
+<b>_90's Movies, American TV Shows, Sports, Music Artists, Scientists, Fruits and Animals._</b>
 
-If the user used all 15 guesses before guessing the movie, the user will hear a buzzer and the correct word will also be displayed for few seconds so the user will see what the word was. The number of losses and games played will be updated.
+###Screenshots:
 
-If user pressed a key that is already guessed, the user will also hear a sound.  
+1. Home Page
 
-If user clicks the reset button, the number of wins, losses and games played will be resetted to 0 and a new word will be picked to guess.
+![Home Page](assets/images/homepage.png)
 
-Special Credits:
+2. Available Categories
 
-flamingtext.com - for the logo images
+![Category](assets/images/category.png)
 
-clipartmax.com - for the rose logo
+3. Game Proper
 
-wikipedia.com, imdb.com, rollingstone.com, billboard.com, goodhousekeeping.com - list of words to be guessed
+![Game Screen](assets/images/gamescreen.png)
 
-orangefreesounds.com - for the sounds used for this game
+
+###Special Credits:
+
+_https://www.flamingtext.com_ - for the logo images
+
+_https://www.clipartmax.com_ - for the rose logo
+
+_Wikipedia, IMDB, Rolling Stone, Billboard, Good Housekeeping_ - list of words to be guessed
+
+_https://www.orangefreesounds.com_ - for the sounds used for this game

@@ -116,8 +116,8 @@ var gamePiece = {
 		 #  AUTHOR        : Maricel Louise Sumulong
 		 #  DATE          : December 18, 2018 PST
 		 #  MODIFIED BY   : Maricel Louise Sumulong
-		 #  REVISION DATE : January 05, 2019 PST
-		 #  REVISION #    : 8
+		 #  REVISION DATE : December 03, 2019 PST
+		 #  REVISION #    : 9
 		 #  DESCRIPTION   : Listens to user key inputs
 		 #  PARAMETERS    : key code event
 		 #
@@ -129,24 +129,35 @@ var gamePiece = {
 			var glet = String.fromCharCode(event.keyCode)
 			var indexes = gamePiece.getAllIndexes(gamePiece.wordToGuess, glet)
 			var tempArr = gamePiece.wordSpace.split("")
-			if (indexes.length != 0) {
+			if (indexes.length != 0) { // if letter guessed is part of the word
 				for (var k = 0; k < indexes.length; k++) {
 					tempArr[indexes[k]] = glet;
 				}
 				gamePiece.wordSpace = tempArr.join("");
 				document.getElementById("guessWordHere").innerHTML = gamePiece.wordSpace;
-			} else {
-				if (gamePiece.guessedLetters.includes(glet)) {
-					document.getElementById("existsAudio").play();
-					return false
-				}
-				gamePiece.guessedLetters.push(glet)
-				document.getElementById("guessLettersHere").innerHTML = gamePiece.guessedLetters.join(" ")
-				//update guess remaining values
-				var grem = document.getElementById("gRem").innerHTML - 1;
-				document.getElementById("gRem").innerHTML = grem;
-		  	  }
-		 
+			}
+			// } else {
+			// 	if (gamePiece.guessedLetters.includes(glet)) {
+			// 		document.getElementById("existsAudio").play();
+			// 		return false
+			// 	}
+			// 	gamePiece.guessedLetters.push(glet)
+			// 	document.getElementById("guessLettersHere").innerHTML = gamePiece.guessedLetters.join(" ")
+			// 	//update guess remaining values
+			// 	var grem = document.getElementById("gRem").innerHTML - 1;
+			// 	document.getElementById("gRem").innerHTML = grem;
+		  	//   }
+				
+			if (gamePiece.guessedLetters.includes(glet)) {
+				document.getElementById("existsAudio").play();
+				return false
+			}
+			gamePiece.guessedLetters.push(glet)
+			document.getElementById("guessLettersHere").innerHTML = gamePiece.guessedLetters.join(" ")
+			//update guess remaining values
+			var grem = document.getElementById("gRem").innerHTML - 1;
+			document.getElementById("gRem").innerHTML = grem;
+
 			//change color for guesses
 			var guessRem = document.getElementById("gRem").innerHTML;
 			var gr = document.getElementById("gRem")
@@ -156,8 +167,24 @@ var gamePiece = {
 				gr.style.color = "red";
 		  	  }
 
+			//check if word is already guessed
+			var isGuessed = gamePiece.checkWordStatus(gamePiece.wordSpace);
+
 			//check if there's still guess remaining
-			if (document.getElementById("gRem").innerHTML == 0) {
+			if (document.getElementById("gRem").innerHTML == 0 && isGuessed) {
+
+				gamePiece.totalWins += 1;
+            	document.getElementById("totalWins").innerHTML = gamePiece.totalWins;
+            	document.getElementById("correctAudio").play();
+            	gamePiece.totalGames += 1;
+            	document.getElementById("gamesPlayed").innerHTML = gamePiece.totalGames;
+            	setTimeout(function(){
+            		gamePiece.resetValues();
+            		gamePiece.pickRandomWord();
+				}, 500)
+
+			} else if (document.getElementById("gRem").innerHTML == 0){
+
 				gamePiece.totalLoss += 1;
 				document.getElementById("totalLoss").innerHTML = gamePiece.totalLoss;
 				document.getElementById("wrongAudio").play();
@@ -171,12 +198,9 @@ var gamePiece = {
             	}, 1500)
 				gamePiece.totalGames += 1;
 				document.getElementById("gamesPlayed").innerHTML = gamePiece.totalGames;
-			}
 			
-		 	//check if word is already guessed
-			var isGuessed = gamePiece.checkWordStatus(gamePiece.wordSpace);
+			 } else if (isGuessed) {
 
-			if (isGuessed) {
 				gamePiece.totalWins += 1;
             	document.getElementById("totalWins").innerHTML = gamePiece.totalWins;
             	document.getElementById("correctAudio").play();
@@ -185,8 +209,9 @@ var gamePiece = {
             	setTimeout(function(){
             		gamePiece.resetValues();
             		gamePiece.pickRandomWord();
-            	}, 500)
-			}
+				}, 500)
+				
+			  }
 		
 		} else if (event.keyCode == 13 && gamePiece.startGame == false) {
 				
