@@ -27,7 +27,7 @@ The player can choose among seven categories:
 ![Game Screen](assets/images/gamescreen.png)
 
 
-###Special Credits:
+### Special Credits:
 
 _https://www.flamingtext.com_ - for the logo images
 
